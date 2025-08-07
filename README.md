@@ -46,3 +46,9 @@ git push
 ````
 git clone <GIT URL>
 ````
+
+### Changes pull to local
+
+```
+git pull <URL>
+```
