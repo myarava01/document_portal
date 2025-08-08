@@ -52,3 +52,11 @@ git clone <GIT URL>
 ```
 git pull <URL>
 ```
+
+### minimum requirement for this project
+
+1. LLM Models: groq(Freely), Gemini(only 15 days access), Openai(Paid), Claude(Paid), HuggingFace(Freely), Ollama(Local setup)
+
+2. Embedding Model: Openai(Paid), HuggingFace, Gemini
+
+3. vectordatabase #varients ##in-memory(Cromadb), #on-disk, #cloudbased(aws bedrock, asthadb, mongodb)
