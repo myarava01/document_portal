@@ -10,8 +10,8 @@
     <!-- Main heading section -->
     <h1>Hello World, Welcome!</h1>
     
-    <!-- This is a developer comment - it won't appear on the page -->
-    <p>This is a simple HTML page demonstrating comments.</p>
+<!-- This is a developer comment - it won't appear on the page -->
+<p>This is a simple HTML page that demonstrates a comment system where users can submit their name and comment, which will then be displayed on the page.</p>
     
     <!-- 
         Multi-line comment example:
@@ -22,6 +22,7 @@
     <!-- Comments section for user interaction -->
     <section id="comments">
         <h2>Leave a Comment</h2>
+        <!-- This section contains a form for users to input and submit comments -->
         
         <!-- Comment submission form -->
         <form id="comment-form">
@@ -45,7 +46,7 @@
     </section>
 
     <script>
-        // Handle comment submission
+        // This JavaScript handles the comment form submission event
         document.getElementById('comment-form').addEventListener('submit', function(e) {
             e.preventDefault();
             
@@ -60,7 +61,7 @@
                     commentsContainer.innerHTML = '';
                 }
                 
-                // Create new comment element
+                // Create new comment element and populate it with user input
                 const commentDiv = document.createElement('div');
                 commentDiv.className = 'comment';
                 commentDiv.innerHTML = `
