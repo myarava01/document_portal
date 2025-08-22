@@ -5,6 +5,6 @@ setup(
     version='1.0',
     packages=find_packages(),
     install_requires=['numpy', 'pandas'],
-    author='Your Name',
-    author_email='your_email@example.com',
+    author='Mukunda Yarava',
+    author_email='myarava01@gmail.com',
 )
