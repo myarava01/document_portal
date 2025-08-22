@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Page</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <!-- Main heading section -->
+    <h1>Hello World, Welcome!</h1>
+    
+    <!-- This is a developer comment - it won't appear on the page -->
+    <p>This is a simple HTML page demonstrating comments.</p>
+    
+    <!-- 
+        Multi-line comment example:
+        Everything between the comment tags
+        is ignored by the browser
+    -->
+    
+    <!-- Comments section for user interaction -->
+    <section id="comments">
+        <h2>Leave a Comment</h2>
+        
+        <!-- Comment submission form -->
+        <form id="comment-form">
+            <div>
+                <label for="username">Your Name:</label>
+                <input type="text" id="username" required>
+            </div>
+            
+            <div>
+                <label for="comment">Your Comment:</label>
+                <textarea id="comment" rows="4" required></textarea>
+            </div>
+            
+            <button type="submit">Post Comment</button>
+        </form>
+        
+        <!-- Container for displaying comments -->
+        <div id="comments-container">
+            <p>No comments yet. Be the first to comment!</p>
+        </div>
+    </section>
+
+    <script>
+        // Handle comment submission
+        document.getElementById('comment-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const username = document.getElementById('username').value;
+            const comment = document.getElementById('comment').value;
+            
+            if (username && comment) {
+                const commentsContainer = document.getElementById('comments-container');
+                
+                // Remove "No comments" message if it exists
+                if (commentsContainer.querySelector('p')) {
+                    commentsContainer.innerHTML = '';
+                }
+                
+                // Create new comment element
+                const commentDiv = document.createElement('div');
+                commentDiv.className = 'comment';
+                commentDiv.innerHTML = `
+                    <h4>${username}</h4>
+                    <p>${comment}</p>
+                    <small>Posted on ${new Date().toLocaleString()}</small>
+                `;
+                
+                commentsContainer.appendChild(commentDiv);
+                
+                // Clear form
+                document.getElementById('username').value = '';
+                document.getElementById('comment').value = '';
+            }
+        });
+    </script>
+</body>
+</html>
